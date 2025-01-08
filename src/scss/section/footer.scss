@@ -1,0 +1,43 @@
+@use '../helpers/mixins.scss' as mixins;
+@use '../helpers/variables.scss' as variables;
+@use '../helpers/fonts.scss' as fonts;
+
+.footer{
+    padding: 24px 13px;
+    font-size: variables.$typography-font-size-18;
+    text-wrap: nowrap;
+    text-align: left;
+
+    &_span{
+    font-family: variables.$font-quaternary;
+    line-height: 21.09px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+
+    }
+    &_socials{
+        display: flex;
+        margin-top: 15px;
+        margin-left: 100px;
+        gap: 10px;
+    }
+} 
+//   PC
+@media (min-width: 1200px) {
+    .footer{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+
+        &_socials{
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+}
+// Tablet
+@media (min-width: 768px) and (max-width: 1200px) {
+    
+        
+}
