@@ -1,0 +1,333 @@
+
+:root {
+    --color-primary: #10BBD5; 
+    --color-text: #333333;
+    --color-background: #ffffff;
+    --hero-background: #f0f0f0;
+    --footer-color: #4C394E;
+    --container-color:#F5F5F5;
+    --card-color: #ffffff;
+    --basket-btn: #4C394E;
+    --end-up-btn: green;
+  }
+  
+  body.dark-theme {
+    --color-primary: #303030; 
+    --color-text: #ffffff;
+    --color-background: #121212;
+    --hero-background: #2e4052;
+    --footer-color: #303030;
+    --container-color: #393939;
+    --card-color: #565656;
+    --basket-btn: #251523;
+    --end-up-btn: #043A00;
+  }
+  
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .body {
+    width: 1400px;
+    font-family: Cabin;
+    right:  52px;
+    left: 52px;
+    background-color: #000000;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+  }
+  
+  .header-top {
+    background-color: var(--color-primary);
+    padding: 16px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+  }
+  
+  .header-top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+  }
+  
+  .logo-text {
+    font-family: 'Cabin', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+
+  h2{
+    white-space: nowrap; 
+  overflow: hidden;         
+  text-overflow: ellipsis;   
+  width: 200px;
+  color: var(--color-text);
+  }
+  
+  .cart-button {
+    position: relative;
+    width: 33px;
+    height: 22px;
+    background-image: url('Vector.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-10px);
+    margin-top: 7px;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 52px;
+    width: 1400px;
+    background-color: white;
+  }
+  
+  
+  .header-bottom p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-buttons a {
+    font-family: 'Cabin', sans-serif;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .header-buttons a:hover {
+    text-decoration: underline;
+  }
+
+  .cart_wheels {
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+  }
+  .header_balance {
+    color: white;
+
+  }
+  
+  .main-container {
+    width: 1400px;
+    background-color: var(--container-color);
+    margin-top: 90px; 
+  }
+  
+  .title {
+    width: 701px;
+    height: 40px;
+    position: relative; 
+    padding: 32px 52px ;
+    color: var(--color-text);
+    
+    
+  }
+  
+  .title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+    width: 1296px;
+    height: 1px;
+    background-color: #A8A8A8;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 48px 52px 120px 52px;
+  }
+  
+  .product-card {
+    background-color: var(--card-color);
+    border: 2px solid #e0e0e0;
+    padding: 32px 16px;
+    position: relative;
+    text-align: left;
+    width: 306px;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+  
+  .product-card img {
+    width: 178px;
+    height: 280px;
+    object-fit: cover;
+    gap: 0px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  
+  .product-label-container {
+    position: absolute;
+    top: 32px;
+    left: 27px;
+    display: flex;
+    gap: 5px;
+   
+  }
+  
+  .product-label {
+    background-color: #4200FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .product-label.new {
+    background-color: #AF39E7;
+  }
+  
+  .product-label.discount {
+    background-color: #EA33C0;
+  }
+  
+  .product_titles {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+    border-bottom: 1px solid black;
+  }
+  
+  .author {
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  .price {
+    font-size: 24px;
+    color: red;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 24px;
+    margin-left: 24px;
+  }
+  
+  .basket_button {
+    background-color: var(--basket-btn);
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 242px;
+    height: 40px;
+    opacity: 1;
+    text-align: center;
+  }
+  
+  .basket_button:hover {
+    background-color: #34193a;
+  }
+  
+  .end-up_button {
+    background-color: var(--end-up-btn);
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 242px;
+    height: 40px;
+    opacity: 1;
+    text-align: center;
+  }
+  
+  .end-up_button:hover {
+    background-color: #218838;
+  }
+  
+  footer {
+    background-color: var(--footer-color);
+    color: white;
+    width: 1400px;
+  }
+  
+  .footer_text {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Cabin;
+    font-size: 16px;
+  }  
+  .chat-icon {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-30%);
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+  
+  }
+  .chat-icon:hover {
+    background-color: #A8A8A8;
+  }
+
+  .theme-toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
